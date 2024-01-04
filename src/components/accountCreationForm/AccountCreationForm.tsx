@@ -124,19 +124,19 @@ const AccountCreationForm = ({
                 <LabeledInput isInvalid={formState.userName.length > 0 && !emailRegex.test(formState.userName)} errorMessage="Username should be a valid email" label="User Name:">
                     <Input type="text" height={inputHeight} fontSize={fontSize} value={formState.userName} onChangeText={handleUserNameChange} width={inputWidth} placeholder="name@example.com"/>
                 </LabeledInput>
-                <LabeledInput errorMessage="jr" label="Password:">
+                <LabeledInput label="Password:">
                     <Input type="password" height={inputHeight} fontSize={fontSize} value={formState.password} onChangeText={handlePasswordChange} width={inputWidth} placeholder="Required"/>
                 </LabeledInput>
-                <LabeledInput errorMessage="jr" label="Server Adress:">
+                <LabeledInput label="Server Adress:">
                     <Input type="text" height={inputHeight} fontSize={fontSize} value={formState.serverAddress} onChangeText={handleServerAddressChange} width={inputWidth} placeholder="example.com"/>
                 </LabeledInput>
                 {isAdvanced && <React.Fragment>
-                    <LabeledInput errorMessage="jr" label="Server Path:">
+                    <LabeledInput label="Server Path:">
                         <Input type="text" height={inputHeight} fontSize={fontSize} value={formState.serverPath} onChangeText={handleServerPathChange} width={inputWidth} placeholder="/calendars/user/"/>
                     </LabeledInput>
                     <Box style={styles.portCheckboxContainer}>
-                        <LabeledInput errorMessage="jr" label="Port:">
-                            <Input type="text" height={inputHeight} fontSize={fontSize} value={formState.port} onChangeText={handlePortChange} width={100} placeholder="/calendars/user/"/>
+                        <LabeledInput label="Port:">
+                            <Input type="text" height={inputHeight} fontSize={fontSize} value={formState.port} onChangeText={handlePortChange} width={100}/>
                         </LabeledInput>
                         <Box style={styles.sslContainer}>
                             <Checkbox onChange={handleToggleSSL} value="Use SSL"/>
